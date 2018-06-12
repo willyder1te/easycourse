@@ -12,11 +12,47 @@ User.delete_all
 Course.delete_all
 Booking.delete_all
 
-puts "All Users / Courses / Bookings are deleted"
+puts "Everything should be deleted:  #{User.all.length} Users / #{Course.all.length} Courses / #{Booking.all.length} Bookings "
+
+letters = ("a".."f").to_a
+users = []
+letters.each do |letter|
+  user = User.create!(email: "#{letter}@#{letter}.#{letter}", password: "password")
+  users << user
+end
+
+puts " #{User.all.length} Users created"
+
+category = ["Film", "French", "Horse riding", "Wrestling"]
+description = ["This is a fucking awesome course xD", "No description given"]
+price = (5..25).to_a
+location = ["Barcelona", "Paris", "Freiburg", "Istanbul"]
+capacity = (1..15).to_a
+prerequisite = ["No prerequisites neccessary"]
+name = ["How to Tinder - by Willy", "Learn riding with Niklas", "Turkish 101 by Sezen", "French learning", "Watch Big Lebowski"]
+
+number_of_courses = 10
+courses = []
+number_of_courses.times do
+  course = Course.create(user_id: users.sample.id, category: category.sample, start_date: (DateTime.now+1), end_date: (DateTime.now + 1 + 2/24.0), description: description.sample, location: location.sample, price: price.sample, capacity: capacity.sample, prerequisite: prerequisite.sample, name: name.sample)
+  courses << course
+  p course
+end
+
+puts "#{Course.all.length} Courses created"
+
+puts ""
+## include booking after Niklas has pushed
+# number_of_bookings = 15
+# number_of_bookings.times do
+#   Booking.create(user_id: users.sample.id, courses.sample.id)
+# end
 
 
-#Creating 5 fake Users
-User.create(email: "a@a.a")
+
+
+
+
 
 #Creating 10 fake courses
 
