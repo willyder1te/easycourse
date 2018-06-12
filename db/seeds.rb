@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+#do setup deleting all existing
+User.delete_all
+Course.delete_all
+Booking.delete_all
+
+puts "All Users / Courses / Bookings are deleted"
+
+
+#Creating 5 fake Users
+User.create(email: "a@a.a")
+
+#Creating 10 fake courses
+
+#Creating 5 fake bookings
+
