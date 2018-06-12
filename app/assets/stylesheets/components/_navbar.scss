@@ -10,6 +10,10 @@
   justify-content: space-between;
 }
 
+.navbar-wagon h3 {
+  margin: 0;
+}
+
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
@@ -84,3 +88,7 @@
 .sticky + .content {
   padding-top: 60px;
 }
+.navbar-wagon-right a{
+  margin: 5px;
+}
+
