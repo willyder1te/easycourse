@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>InspaCourse</title>
@@ -9,11 +10,13 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
 
-    <%= yield %>
+  <body>
+    <%= render "shared/navbar" %>
     <%= render "/shared/flash" %>
+    <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-  </body>
-</html>
+     <%= render "shared/footer" %>
+    </body>
+   </html>
