@@ -41,20 +41,13 @@ end
 
 puts "#{Course.all.length} Courses created"
 
-puts ""
-## include booking after Niklas has pushed
-# number_of_bookings = 15
-# number_of_bookings.times do
-#   Booking.create(user_id: users.sample.id, courses.sample.id)
-# end
+# Until here everything works locally
+# The following might cause some conflicts with Niklas work, please resolve it.
+number_of_bookings = 15
+number_of_bookings.times do
+  Booking.create(user_id: users.sample.id, courses.sample.id)
+end
 
+puts "#{Booking.all.length} Bookings created"
 
-
-
-
-
-
-#Creating 10 fake courses
-
-#Creating 5 fake bookings
 
