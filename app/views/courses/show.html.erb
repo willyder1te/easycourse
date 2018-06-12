@@ -10,4 +10,7 @@
   <li>
     <%= @course.prerequisite %>
   </li>
+  <li>
+    <%= cl_image_tag(@course.photo, width: 300, height: 400, crop: :fill) %>
+  </li>
 </ul>
