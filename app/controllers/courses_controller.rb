@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :set_course, only: [:edit, :update, :destroy, :show]
+  before_action :set_course, only: [:edit, :update, :destroy, :show, :index]
 
   def new
     @course = Course.new
@@ -29,10 +29,11 @@ class CoursesController < ApplicationController
     authorize @course
   end
 
-  def index
-    @courses = policy_scope(Course)
+  # def index
+  #   authorize @course
+  #   @courses = policy_scope(Course)
 
-  end
+  # end
 
   def destroy
     authorize @course
