@@ -3,5 +3,6 @@ class DashboardController < ApplicationController
   end
 
   def bookings_index
+    @bookings = current_user.bookings
   end
 end
