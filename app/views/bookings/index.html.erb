@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <% @bookings.each do |booking| %>
+    <!-- Specify breaking points for col -->
+      <div class="col-xs-12">
+        <button>
+          <p><%= link_to booking.course_id.category, booking_path(booking) %></p>
+        </button>
+      </div>
+  </div>
+</div>
