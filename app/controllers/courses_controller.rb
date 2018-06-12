@@ -3,31 +3,39 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    authorize @course
   end
 
   def create
     @course = Course.new(course_params)
     @course.user = current_user
+    authorize @course
     @course.save
     redirect_to course_path(@course)
   end
 
   def edit
+    authorize @course
+
   end
 
   def update
+    authorize @course
     @course.update(course_params)
     redirect_to course_path(@course)
   end
 
   def show
+    authorize @course
   end
 
   def index
-    @courses = Course.all
+    @courses = policy_scope(Course)
+
   end
 
   def destroy
+    authorize @course
     @course.destroy
     redirect_to courses_path
   end
