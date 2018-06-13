@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new
     @booking.course = @course
-
+    @booking.user = current_user
     @booking.save
 
     redirect_to my_bookings_path
