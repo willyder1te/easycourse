@@ -10,7 +10,7 @@
               style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= booking.course.photo.url %>')">
             <div class="card-category">Popular</div>
             <div class="card-description">
-              <h2><%= booking.course.name %></h2>
+              <h2><%= link_to booking.course.name, course_path(booking.course) %></h2>
               <p>Very cool city, the best</p>
             </div>
           </div>
