@@ -1,8 +1,57 @@
-<h1>Review Details and Pay</h1>
 
+<div class="content">
+  <div class="head-box">
+    <div class="right">
+      <h1>Finalize your Booking</h1>
+    </div>
+      <div class="left">
+        <%= link_to "Confirm Booking", my_courses_path, class: "btn btn-primary btn-lg"%>
+      </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 infos">
+        <div class="details course-details">
+          <h2>Course Details</h2>
+          <div>
+            <h3><%= @course.name %></h3>
+            <hr>
+            <p>Location: <%=@course.location %></p>
+            <hr>
+            <p>Time: <%=@course.start_date  %></p>
+            <hr>
+            <p>Price: <%= @course.price.to_int %>€</p>
+          </div>
+        </div>
+
+        <div class="details user-details">
+          <h2>Your Details</h2>
+          <h3><%=@user.name  %></h3>
+          <hr>
+          <p>Email: <%=@user.email%></p>
+          <hr>
+          <p>Phone: <%=@user.phone %></p>
+          <hr>
+          <%= simple_form_for @user, url: update_profile_path, method: :patch do |f| %>
+          <%= f.input :payment_preferences, placeholder: "Your Credit Card Number", class: "form-control" %>
+          <%= f.submit "Add", class: "btn-sm btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-sm-5 course-pic">
+
+       <div class="card card-spacing"
+       style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= @course.photo.url %>')">
+     </div>
+   </div>
+ </div>
 
 <h1></h1>
 <%= link_to "Book course", course_bookings_path, method: :post, class: "btn btn-primary"%>
+</div>
 
-<!-- Summary of booking -->
-<!-- Payment details  -->
+    <div class="left">
+      <%= link_to "Confirm Booking", course_bookings_path, method: :post, class: "btn btn-primary btn-lg"%>
+    </div>
