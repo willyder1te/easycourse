@@ -1,2 +1,4 @@
-<h1><%= @user.name %>'s profile</h1>
-<%= cl_image_tag(@user.photo, width: 300, height: 400, crop: :fill) %>
+<div class="user-container">
+  <h1><%= @user.name %>'s profile</h1>
+  <%= cl_image_tag(@user.photo, width: 300, height: 400, crop: :fill) %>
+</div>
