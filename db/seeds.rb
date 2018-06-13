@@ -14,7 +14,7 @@ User.delete_all
 
 puts "Everything should be deleted:  #{User.all.length} Users / #{Course.all.length} Courses / #{Booking.all.length} Bookings "
 
-avatar_photo_url = ["http://facelab.org/People/images/smile/ben", "http://facelab.org/People/images/smile/Ant", "http://facelab.org/People/images/smile/hahn"]
+avatar_photo_url = ["http://facelab.org/People/images/smile/Jaimie.jpg","http://facelab.org/People/images/smile/holzleitner.jpg","http://facelab.org/People/images/smile/fasolt.jpg","http://facelab.org/People/images/smile/Rebecca.jpg","http://facelab.org/People/images/smile/Lindsay.jpg","http://facelab.org/People/images/smile/ben", "http://facelab.org/People/images/smile/Ant", "http://facelab.org/People/images/smile/hahn"]
 
 
 letters = ("a".."c").to_a
