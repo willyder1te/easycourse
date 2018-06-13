@@ -6,6 +6,10 @@
   padding: 1rem;
   background-color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  justify-content: space-between;
 }
 .footer-links {
   display: flex;
@@ -29,3 +33,9 @@
     position: relative;
     min-height: 100%;
 }
+
+
+.footer-copyright{
+  font-weight: bold;
+}
+
