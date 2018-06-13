@@ -8,25 +8,24 @@ class BookingsController < ApplicationController
   # end
 
   def show
-    authorize @booking
+
   end
 
   def new
     @booking = Booking.new
-    authorize @booking
+
   end
 
   def create
     @booking = Booking.new
     @booking.course = @course
-    authorize @booking
+
     @booking.save
 
     redirect_to my_bookings_path
   end
 
   def destroy
-    authorize @booking
     @booking.destroy
     redirect_to my_bookings_path
   end
