@@ -16,7 +16,6 @@ class CoursesController < ApplicationController
 
   def edit
     authorize @course
-
   end
 
   def update
@@ -31,7 +30,6 @@ class CoursesController < ApplicationController
 
   def index
     @courses = policy_scope(Course)
-
   end
 
   def destroy
