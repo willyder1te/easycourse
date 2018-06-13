@@ -8,15 +8,18 @@ class BookingsController < ApplicationController
   # end
 
   def show
+
   end
 
   def new
     @booking = Booking.new
+
   end
 
   def create
     @booking = Booking.new
     @booking.course = @course
+
     @booking.save
 
     redirect_to my_bookings_path
