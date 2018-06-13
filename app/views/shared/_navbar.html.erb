@@ -6,14 +6,13 @@
  <!-- Right Navigation -->
  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
+  <% if current_user %>
 
-    <%= link_to 'Log In', new_user_session_path %>
-
-    <%= link_to 'Sign Up', new_user_registration_path %>
-
+  <!-- Profile picture with dropdown list -->
     <%= link_to "My booked classes", my_bookings_path, class: "navbar-wagon-link" %>
     <%= link_to "My hosted classes", my_courses_path, class: "navbar-wagon-link" %>
-
+    <a href="#">Messages</a>
+  <div class="navbar-wagon-item">
     <div class="dropdown">
       <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -51,5 +50,3 @@
   <% end %>
 </div>
 </div>
-
-
