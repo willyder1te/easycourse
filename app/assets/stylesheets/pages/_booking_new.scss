@@ -5,7 +5,8 @@
   position: relative;
   border-color: rgba(20,20,20,1);
   padding: 15px;
-  margin: 50px 20px;
+  margin: 50px;
+  margin-left: 0px;
 }
 
 .user-details{
@@ -22,10 +23,27 @@ height: 500px;
   align-items: center;
   margin-top: 70px;
   margin-bottom: 40px;
+  padding-left: 80px;
+  padding-right: 85px;
 }
 .content{
   padding: 0px 50px;
 }
 
+.row-booking-page {
+  margin: 0px;
+}
 
+.padding-zero {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container-bookings {
+  margin-top: -60px;
+}
+
+.container-bookings--master {
+  padding: 0px;
+}
 
