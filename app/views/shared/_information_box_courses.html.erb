@@ -1,3 +1,25 @@
 <div class="information-box">
+  <div class="general-information">
+    <p><strong>Date: </strong><%= @course.start_date.strftime('%x' )%></p>
+    <p><strong>Start time: </strong><%= @course.start_date.strftime('%r')%></p>
+    <p><strong>End time: </strong><%= @course.end_date.strftime('%r') %></p>
+    <p><strong>Location: </strong><%= @course.location%></p>
+    <p><strong>capacity: </strong><%=@course.capacity%></p>
+    <p><strong>price: </strong><%=@course.price%></p>
+  </div>
 
-</div>
+
+  <div class="teacher-description">
+    <div class="details-information">
+      <p><strong>Description: </strong><%= @course.description%></p>
+      <p><strong>Prerequistes: </strong><%= @course.prerequisite%></p>
+    </div>
+
+
+    <div class="teacher-information">
+      <p><strong>Teacher: </strong><%= @course.user.name%></p>
+      <%= cl_image_tag @course.user.photo, crop: :fill, class: "avatar" %>
+      <p><strong>Phone: </strong><%= @course.user.phone%></p>
+    </div>
+    </div>
+  </div>
