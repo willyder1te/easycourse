@@ -1,20 +1,23 @@
-<h1 style="padding-left: 35px; margin-top: 0px;"><%= Course.all.count %> Courses offered</h1>
-<ul style="padding: 0px 20px 0px 20px;">
-    <% @courses.each do |course| %>
-      <div class="col-xs-12 col-sm-6 col-lg-4">
-        <div class="card card-spacing"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= course.photo.url %>')">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2><%= link_to course.name, course_path(course), {:style=>'color:white;'} %></h2>
-            <p>Some more shit here please</p>
+
+<div class="row">
+  <h1 style="padding-left: 35px; margin-top: 0px;"><%= Course.all.count %> Courses offered</h1>
+  <ul style="padding: 0px 20px 0px 20px;">
+      <% @courses.each do |course| %>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card card-spacing"
+              style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= course.photo.url %>')">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2><%= link_to course.name, course_path(course), {:style=>'color:white;'} %></h2>
+              <p>Some more shit here please</p>
+            </div>
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            <a class="card-link" href="<%= course_path(course) %>" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
         </div>
-      </div>
-    <% end %>
-</ul>
+      <% end %>
+  </ul>
+</div>
 
 
 
