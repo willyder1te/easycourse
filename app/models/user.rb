@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :bookings
-  has_many :courses, through: :bookings
+  has_many :courses
 
   mount_uploader :photo, PhotoUploader
 end
