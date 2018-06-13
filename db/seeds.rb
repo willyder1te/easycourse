@@ -53,20 +53,23 @@ course_photo_url = [
           "https://images.unsplash.com/photo-1525725296312-37c06d2338ba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=efff2c95e65d53c621a19ab33fd434a9&auto=format&fit=crop&w=1050&q=80",
           "https://images.unsplash.com/photo-1471565661762-b9dfae862dbe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df9e89a26072d94a6b9c86b5430eabd7&auto=format&fit=crop&w=1050&q=80"]
 courses = []
-10.times do
-  course = Course.create(
-        user_id: users.sample.id,
-        category: category.sample,
-        start_date: (DateTime.now+1),
-        end_date: (DateTime.now + 1 + 2/24.0),
-        description: Faker::HarryPotter.quote,
-        location: Faker::GameOfThrones.city,
-        price: price.sample,
-        capacity: capacity.sample,
-        prerequisite: prerequisite.sample,
-        name: Faker::Esport.game,
-        remote_photo_url: course_photo_url.sample)
-  courses << course
+
+users.each do |user|
+  6.times do
+    course = Course.create(
+          user_id: user.id,
+          category: category.sample,
+          start_date: (DateTime.now+1),
+          end_date: (DateTime.now + 1 + 2/24.0),
+          description: Faker::HarryPotter.quote,
+          location: Faker::GameOfThrones.city,
+          price: price.sample,
+          capacity: capacity.sample,
+          prerequisite: prerequisite.sample,
+          name: Faker::Superhero.descriptor,
+          remote_photo_url: course_photo_url.sample)
+    courses << course
+  end
 end
 
 puts "#{Course.all.length} Courses created"
@@ -74,10 +77,15 @@ puts "#{Course.all.length} Courses created"
 # Until here everything works locally
 # The following might cause some conflicts with Niklas work, please resolve it.
 
-15.times do
-  Booking.create(
-        user_id: users.sample.id,
-        course_id: courses.sample.id)
+
+users.each do |user|
+  courses_shuffle = courses.shuffle.first(5)
+  courses_shuffle.each do |course|
+    Booking.create(
+          user_id: user.id,
+          course_id: course.id)
+
+  end
 end
 
 puts "#{Booking.all.length} Bookings created"
