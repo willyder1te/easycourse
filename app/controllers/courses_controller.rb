@@ -25,6 +25,15 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @markers = []
+    @marker = {
+        lat: @course.latitude,
+        lng: @course.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    @markers << @marker
+
+    # @json = Course.find(params[:id]).location.to_gmaps4rails
     authorize @course
   end
 
