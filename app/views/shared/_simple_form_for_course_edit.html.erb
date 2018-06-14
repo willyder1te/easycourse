@@ -4,7 +4,7 @@
   <%= f.input :start_date, class: "form-control" %>
   <%= f.input :end_date, class: "form-control" %>
   <%= f.input :description, class: "form-control" %>
-  <%= f.input :location, class: "form-control" %>
+  <%= f.input :location, input_html: { class: 'location-autocomplete' } %>
   <%= f.input :price, class: "form-control" %>
   <%= f.input :capacity, class: "form-control" %>
   <%= f.input :prerequisite, class: "form-control" %>
