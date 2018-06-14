@@ -1,4 +1,21 @@
-<h1>Edit your course: "<%=@course.name%>"</h1>
 
-<%= render "shared/simple_form_for_course_edit" %>
 
+  <div class="form-banner" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.5) 0%, rgba(50,50,50,0.5) 80%), url('https://images.unsplash.com/photo-1517637633369-e4cc28755e01?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dee4914d3c1248978f29fa6462cb755&auto=format&fit=crop&w=1050&q=80');">
+
+    <div class="white-box">
+      <div class="form-header">
+
+      <h2> <%=@course.name %></h2>
+      <h4>Edit your Course</h4>
+    </div>
+    <div class="form">
+      <%= render "shared/simple_form_for_course", title: "Edit your Course #{@course.name}", button_text: "Edit Course" %>
+    </div>
+    <div class="delete-button">
+      <%= link_to "Cancel Course", course_path(@course),
+      method: :delete,
+      data: { confirm: "Are you sure that you want to cancel your course #{@course.name}?"},
+      class: "btn btn-danger btn-sm" %>
+    </div>
+  </div>
+</div>
