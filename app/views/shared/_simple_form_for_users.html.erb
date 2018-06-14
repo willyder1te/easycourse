@@ -1,7 +1,7 @@
 <%= simple_form_for @user, url: update_profile_path, method: :patch do |f| %>
   <%= f.input :name, class: "form-control" %>
   <%= f.input :email, class: "form-control" %>
-  <%= f.input :location, class: "form-control" %>
+  <%= f.input :location, input_html: { class: 'location-autocomplete' } %>
   <%= f.input :description, class: "form-control" %>
   <%= f.input :payment_preferences, class: "form-control" %>
   <%= f.input :phone, class: "form-control" %>

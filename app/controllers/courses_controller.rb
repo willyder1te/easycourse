@@ -25,11 +25,29 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @markers = []
+    @marker = {
+        lat: @course.latitude,
+        lng: @course.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    @markers << @marker
+
+    # @json = Course.find(params[:id]).location.to_gmaps4rails
     authorize @course
   end
 
   def index
     @courses = policy_scope(Course)
+    @courses = Course.where.not(latitude: nil, longitude: nil)
+
+    @markers = @courses.map do |course|
+      {
+        lat: course.latitude,
+        lng: course.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def destroy

@@ -1,0 +1,16 @@
+<div class="container-mybookings">
+  <div class="row" style="padding: 0px 20px 0px 20px;">
+    <h1 style="margin-top: 60px; padding-left: 9px;">All my posted classes:</h1>
+    <% current_user.courses.each do |course| %>
+      <div class="col-xs-12 col-sm-6" style="margin-left: -5px; margin-right: 5px;">
+        <div class="card card-spacing" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= course.photo.url %>')">
+          <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2><%= link_to course.name, course_path(course), {:style=>'color:white;'} %></h2>
+              <p>Very cool city, the best</p>
+            </div>
+          </div>
+        </div>
+      </row>
+  <% end %>
+</div>
