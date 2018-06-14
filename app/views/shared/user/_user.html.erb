@@ -1,0 +1,27 @@
+<div class="wrapper wrapper-colorgrading">
+  <div class="user-container">
+    <div class="adjust-padding">
+      <div class="row" style="padding-left: 5%; padding-right: 5%; padding-top: 5%; padding-bottom: 3%; margin: 0px;">
+        <div class="col-sm-4" style="padding-left: 3%; padding-top: 3%">
+          <%= cl_image_tag(@user.photo, width: 300, height: 400, crop: :fill) %>
+        </div>
+          <div class="col-sm-8 user-data user-data-text" style="padding-top: 3%; padding-right: 3%; padding-left: 2%; ">
+            <p class="text-decoration p-margin-bottom">Name</p>
+              <h1 class="h1-margin-top">Hi, <%= @user.name %></h1>
+            <p class="text-decoration p-margin-bottom">Location</p>
+              <h1 class="h1-margin-top h1-margin-top"><%= @user.location %></h1>
+            <p class="text-decoration p-margin-bottom">Description</p>
+              <h1 class="h1-margin-top h1-margin-top"><%= @user.description %></h1>
+            <p class="text-decoration p-margin-bottom">Phone</p>
+              <h1 class="h1-margin-top h1-margin-top"><%= @user.phone %></h1>
+            <p class="text-decoration p-margin-bottom">Payment Preferences</p>
+              <h1 class="h1-margin-top h1-margin-top"><%= @user.payment_preferences %></h1>
+          </div>
+        <div class="col-sm-12" style="padding-left: 0px; padding-right: 0px; margin-right: 0px; margin-left: ">
+          <%= render "/shared/cards_index", title: "My offered courses" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

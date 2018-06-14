@@ -1,5 +1,6 @@
-<div class="row">
-  <h1 style="padding-left: 35px; margin-top: 0px;"><%= Course.all.count %> Courses offered</h1>
+
+<div class="row" style="margin-right: 0px; margin-left: 0px">
+  <h1 style="padding-left: 35px; margin-top: 0px;"><%= title %></h1>
   <ul style="padding: 0px 20px 0px 20px;">
       <% @courses.each do |course| %>
         <div class="col-xs-12 col-sm-6 col-lg-4">
