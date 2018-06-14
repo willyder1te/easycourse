@@ -53,7 +53,7 @@ class CoursesController < ApplicationController
   def destroy
     authorize @course
     @course.destroy
-    redirect_to courses_path
+    redirect_to my_courses_path
   end
 
   private
