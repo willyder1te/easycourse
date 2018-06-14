@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
   resources :courses do
-    resources :bookings, only: [:new, :create, :show, :index]
+    resources :bookings, only: [:new, :create, :show, :index, :destroy]
   end
 
   get "/mycourses", to: "dashboard#courses_index", as: "my_courses"
