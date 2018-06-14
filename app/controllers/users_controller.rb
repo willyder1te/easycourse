@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: :show
 
   def show
+    @courses = Course.where.not(latitude: nil, longitude: nil).sample(3)
   end
 
   def edit
@@ -23,4 +24,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :location, :photo, :description, :payment_preferences)
   end
+
 end
