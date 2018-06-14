@@ -1,18 +1,8 @@
-<div class="col-sm-6">
-  <div style="margin-left: 5%; margin-right: 5%;">
-    <%= render "shared/cards_index", title: "#{Course.all.count} Courses offered" %>
-  </div>
-</div>
-
-<div class="col-sm-6">
-  <div style="margin-left: 5%; margin-right: 5%;">
-    <div
-      id="map"
-      style="width: 100%;
-      height: 600px;"
-      data-markers="<%= @markers.to_json %>"
-    ></div>
-  </div>
-</div>
-
-
+-<%= render "shared/cards_index", title: "#{Course.all.count} Courses offered" %>
+-
+-<div
+-  id="map"
+-  style="width: 100%;
+-  height: 600px;"
+-  data-markers="<%= @markers.to_json %>"
+-></div>
