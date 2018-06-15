@@ -4,22 +4,23 @@
         <div class="form-spaced">
           <div class="form-grouped">
             <label for="location">Location:</label>
-            <input type="text" class="location-autocomplete form-control" name="location">
+            <input type="text" class="location-autocomplete form-control" name="location" value=<%= params["location"] %>>
           </div>
 
           <div class="form-grouped">
             <label for="start_time">Start time:</label>
-            <input type="datetime-local" class="form-control" name="start_time">
+            <input type="datetime-local" class="form-control" name="start_time" value=<%= params["start_time"] %>>
           </div>
 
                <div class="form-grouped">
             <label for="end_time">End time:</label>
-           <input type="datetime-local" class="form-control" name="end_time">
+           <input type="datetime-local" class="form-control" name="end_time" value=<%= params["end-time"] %>>
                </div>
 
           <div class="form-grouped">
             <label for="category">Category:</label>
-            <select class="form-control" name="category">
+            <select class="form-control" name="category" value=<%= params["category"] %>>
+              <option value="all">All</option>
               <option value="tech">Tech</option>
               <option value="sport">Sport</option>
               <option value="music">Music</option>
@@ -36,7 +37,7 @@
 
     <div class="slidecontainer padding-right-10 padding-left-10 form-grouped">
     <label class="slider-output" for="max-price">Maximum Price: </label>
-      <input name="max-price" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <input name="max-price" type="range" min="1" max="100" value="<%= params['max-price'] %>" class="slider" id="myRange">
     </div>
 
   <input type="submit" class="btn btn-primary" value="Filter">
