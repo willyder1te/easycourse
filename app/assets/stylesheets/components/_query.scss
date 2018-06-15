@@ -1,0 +1,49 @@
+.form-spaced {
+  margin-top: 20px;
+  display: flex;
+}
+
+.form-grouped {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+
+
+  input.form-control {
+    option {
+        font-size: 14px;
+      }
+
+  font-size: 14px;
+
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
+
+
+.padding-left-10 {
+  padding-left: 10%;
+}
+
+.padding-right-10 {
+  padding-right: 10%;
+}
+
+.small-heading{
+  font-size: 38px;
+}
+
+.make-flex{
+  display: flex;
+  align-items: flex-start;
+}
+
+.map-container{
+  width: 40%;
+}
+
+.courses-cards {
+  width: 60%;
+}
