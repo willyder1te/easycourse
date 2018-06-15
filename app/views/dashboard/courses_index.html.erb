@@ -1,10 +1,8 @@
 <div class="container-mybookings">
   <% if current_user.courses.empty? %>
-  <div style="text-align: center; align-items: ">
-    <h3 style="margin-top: 0px; padding-top: 50px; ">You don't host any courses</h3>
-    <div class="delete-section">
-      <%= link_to "Add a new course", new_course_path, class: "btn btn-primary btn-md" %>
-    </div>
+  <h3>You don't host any courses</h3>
+  <div class="delete-section">
+    <%= link_to "Add a new course", new_course_path, class: "btn btn-primary btn-md" %>
   </div>
   <% else %>
   <div class="row" style="padding: 0px 20px 0px 20px;">

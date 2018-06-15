@@ -1,6 +1,6 @@
 <div class="container-mybookings">
   <% if current_user.bookings.empty? %>
-  <h3 style="margin-top: 0px; padding-top: 50px;>You don't have any Bookings yet</h3>
+  <h3>You don't have any Bookings yet</h3>
   <div class="delete-section">
     <%= link_to "Search our Courses", courses_path, class: "btn btn-primary btn-md" %>
   </div>
