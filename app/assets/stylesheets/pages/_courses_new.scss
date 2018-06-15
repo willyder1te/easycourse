@@ -8,10 +8,12 @@
   border-radius: 5px;
 }
 
-.form{
-
+.head-box{
+  display: flex;
+  align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
-
 .form-banner{
   text-align: center;
   height: 100vh;
