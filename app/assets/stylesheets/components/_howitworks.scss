@@ -4,6 +4,7 @@
   font-weight: bold;
   overflow:hidden;
   box-sizing: border-box;
+  padding-top:10%;
 
 }
 
@@ -14,6 +15,7 @@
  justify-content:flex-end;
  flex-direction: row-reverse;
  text-align:right;
+ padding-top:10%;
 
 
 }
@@ -22,7 +24,7 @@
   font-size:200px;
   color:green;
   font-weight: bold;
-
+  padding-top:10%;
 }
 
 .icon-box{
@@ -105,19 +107,27 @@
 .middle{
   text-align:center;
   font-weight:bold;
+  padding-right:15px;
 
 }
 .last{
-  color: #FF7F50;
+  color: #000000;
+  text-align:center;
+  padding-bottom:40px;
+  padding-top:8%;
 
 }
 .last2{
-  color:  #DC143C;
+  color:  #000000;
+  padding-right:50px;
+  text-align:center;
 }
 
 
 .last3{
-  color:  #006400;
+  color: #000000;
+  text-align:center;
+  padding-bottom:15%;
 }
 
 
