@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2018_06_14_093815) do
     t.string "name"
     t.string "location"
     t.string "photo"
-    t.string "phone"
+    t.string "phonephone"
     t.text "description"
     t.string "payment_preferences"
     t.float "latitude"
