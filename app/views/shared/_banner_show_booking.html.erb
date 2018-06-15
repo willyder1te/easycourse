@@ -1,0 +1,12 @@
+<div class="banner banner--small" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.5) 0%, rgba(50,50,50,0.5) 80%), url('<%= @course.photo.url %>');">
+  <div class="banner-content">
+    <h1> You Booked:</h1>
+    <h1><%= @course.name %></h1>
+    <p> Type of Course: <%= @course.category %></p>
+    <%= link_to "Delete Booking", course_booking_path(@course, @booking),
+      method: :delete,
+      data: { confirm: "Are you sure that you want to cancel your booking for #{@course.name}?"},
+      class: "btn btn-primary btn-md" %>
+  </div>
+</div>
+

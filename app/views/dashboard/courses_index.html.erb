@@ -1,32 +1,36 @@
-<!-- <div class="container">
-  <div class="row">
-    <h1>All my posted classes:</h1>
-
-      </div>
-  </div>
-</div> -->
-
-
-
-
 <div class="container-mybookings">
-  <!-- <div class="row row-mybookings"> -->
-
-
-      <div class="row" style="padding: 0px 20px 0px 20px;">
-        <h1 style="margin-top: 60px; padding-left: 9px;">All my posted classes:</h1>
-        <% current_user.courses.each do |course| %>
-          <div class="col-xs-12 col-sm-6" style="margin-left: -5px; margin-right: 5px;">
-            <div class="card card-spacing"
-              style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= course.photo.url %>')">
-            <div class="card-category">Popular</div>
-            <div class="card-description">
-              <h2><%= link_to course.name, course_path(course), {:style=>'color:white;'} %></h2>
-              <p>Very cool city, the best</p>
-            </div>
-          </div>
+  <% if current_user.courses.empty? %>
+  <h3>You don't host any courses</h3>
+  <div class="delete-section">
+    <%= link_to "Add a new course", new_course_path, class: "btn btn-primary btn-md" %>
+  </div>
+  <% else %>
+  <div class="row" style="padding: 0px 20px 0px 20px;">
+    <h1 style="margin-top: 60px; padding-left: 9px;">All my posted classes:</h1>
+    <% current_user.courses.each do |course| %>
+    <div class="col-xs-12 col-sm-6" style="margin-left: -5px; margin-right: 5px;">
+      <div class="card card-spacing"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= course.photo.url %>')">
+      <div class="card-space-bet">
+        <div class="card-category"><%= course.category %></div>
+        <div class="card-edit">
+          <%= link_to "Edit", edit_course_path(course), {:style=>'color:white;'} %>
         </div>
-      </row>
-    <% end %>
-  <!-- </div> -->
+        <div class="card-date">
+          <p> <strong>Date: </strong>
+            <%= course.start_date.strftime('%x' )%>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-description">
+        <h2><%= link_to course.name, course_path(course), {:style=>'color:white;'} %></h2>
+        <p><%= truncate(course.description, :length => 50, :separator => ' ') %></p>
+      </div>
+    </div>
+  </div>
+</row>
+<% end %>
+<% end %>
 </div>
+

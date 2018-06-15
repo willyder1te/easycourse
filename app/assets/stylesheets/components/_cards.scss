@@ -60,4 +60,25 @@
   color: white;
 }
 
+.card-edit {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.card-date {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.card-space-bet{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 

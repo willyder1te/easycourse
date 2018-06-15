@@ -1,4 +1,5 @@
 class DashboardController < ApplicationController
+
   def courses_index
   end
 
