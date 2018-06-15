@@ -45,10 +45,9 @@ class CoursesController < ApplicationController
     end
 
     if params["category"] != "" && params["category"] != nil
-      category = params["category"]
-      if category == "all"
-      else
-        @courses = @courses.reject { |course| course.category.downcase != category }
+      @category = params["category"]
+      if @category != "all"
+        @courses = @courses.reject { |course| course.category.downcase != @category }
       end
     end
 

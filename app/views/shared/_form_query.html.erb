@@ -19,17 +19,17 @@
 
           <div class="form-grouped">
             <label for="category">Category:</label>
-            <select class="form-control" name="category" value=<%= params["category"] %>>
-              <option value="all">All</option>
-              <option value="tech">Tech</option>
-              <option value="sport">Sport</option>
-              <option value="music">Music</option>
-              <option value="language">Language</option>
-              <option value="arts">Arts</option>
-              <option value="food">Food</option>
-              <option value="relaxation">Relaxation</option>
-              <option value="career">Career</option>
-              <option value="beauty">Beauty</option>
+            <select class="form-control" name="category" >
+              <option <%= 'selected' if @category == "all" %> value="all">All</option>
+              <option <%= 'selected' if @category == "tech" %> value="tech">Tech</option>
+              <option <%= 'selected' if @category == "sport" %> value="sport">Sport</option>
+              <option <%= 'selected' if @category == "music" %> value="music">Music</option>
+              <option <%= 'tech' if @category == "tech" %> value="language">Language</option>
+              <option <%= 'selected' if @category == "arts" %> value="arts">Arts</option>
+              <option <%= 'selected' if @category == "food" %> value="food">Food</option>
+              <option <%= 'selected' if @category == "relaxation" %> value="relaxation">Relaxation</option>
+              <option <%= 'selected' if @category == "career" %> value="career">Career</option>
+              <option <%= 'selected' if @category == "beauty" %> value="beauty">Beauty</option>
             </select>
           </div>
         </div>
