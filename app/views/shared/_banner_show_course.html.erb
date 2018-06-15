@@ -2,7 +2,11 @@
   <div class="banner-content">
     <h1><%= @course.name %></h1>
     <p> Type of Course: <%= @course.category %></p>
-    <%= link_to "Book", new_course_booking_path(@course), class: "btn btn-primary btn-lg" %>
+    <% if current_user == @course.user  %>
+        <%= link_to "Edit", edit_course_path(@course), class: "btn btn-primary btn-lg" %>
+    <% else %>
+        <%= link_to "Book", new_course_booking_path(@course), class: "btn btn-primary btn-lg" %>
+    <% end %>
   </div>
 </div>
 
