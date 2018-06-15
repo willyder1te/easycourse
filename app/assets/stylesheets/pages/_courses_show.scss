@@ -1,11 +1,15 @@
 .information-box{
   display: flex;
-  padding: 20px 40px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
   justify-content: space-around;
 }
 
 .general-information{
-  width: 20%;
+  padding-left: 0px;
+  padding-bottom: 3%;
 }
 
 .teacher-description{
@@ -16,4 +20,10 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.course-information {
+  background-color: white;
+  width: 100%;
+  padding: 8px 8px 8px 8px;
 }
