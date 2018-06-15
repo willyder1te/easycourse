@@ -1,4 +1,4 @@
-<div class="wrapper wrapper-colorgrading">
+<div class="wrapper wrapper-colorgrading" style="margin-left: -13%; margin-right: -13%;">
   <div class="user-container">
     <div class="adjust-padding">
       <div class="row" style="padding-left: 5%; padding-right: 5%; padding-top: 5%; padding-bottom: 3%; margin: 0px;">
@@ -12,13 +12,11 @@
               <h1 class="h1-margin-top h1-margin-top"><%= @user.location %></h1>
             <p class="text-decoration p-margin-bottom">Description</p>
               <h1 class="h1-margin-top h1-margin-top"><%= @user.description %></h1>
-            <p class="text-decoration p-margin-bottom">Phone</p>
-              <h1 class="h1-margin-top h1-margin-top"><%= @user.phone %></h1>
             <p class="text-decoration p-margin-bottom">Payment Preferences</p>
               <h1 class="h1-margin-top h1-margin-top"><%= @user.payment_preferences %></h1>
           </div>
         <div class="col-sm-12" style="padding-left: 0px; padding-right: 0px; margin-right: 0px; margin-left: ">
-          <h1 style="padding-left: 35px; margin-top: 0px;">My offered courses</h1>
+          <h1 style="padding-left: 35px; margin-top: 7%; ">My offered courses</h1>
           <%= render "/shared/cards_index"%>
         </div>
       </div>
