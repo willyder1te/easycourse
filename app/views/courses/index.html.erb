@@ -1,12 +1,13 @@
 <%= render "shared/form_query" %>
-
-<div class="padding-right-10 padding-left-10 make-flex">
+<h1 class="padding-left-10 small-heading"><%= "#{@courses.count} courses fitting your filters:"%></h1>
+<div class="padding-left-10 make-flex">
 
   <div class="courses-cards">
-    <%= render "shared/cards_index", title: "#{Course.all.count} Courses offered" %>
+    <%= render "shared/cards_index" %>
   </div>
 
   <div class="map-container">
+  <div class="row card-spacing" style="margin-right: 0px; margin-left: 0px">
     <div
       id="map"
       style="width: 100%;
@@ -14,5 +15,5 @@
       data-markers="<%= @markers.to_json %>"
     ></div>
   </div>
-
+  </div>
 </div>
