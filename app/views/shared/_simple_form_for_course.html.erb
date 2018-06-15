@@ -1,11 +1,10 @@
-
-
  <div class="form-field">
    <%= simple_form_for @course do |f| %>
    <%= f.input :name, class: "form-control" %>
    <%= render "shared/category_dropdown", f: f %>
-  <%= f.input :start_date, class: "form-control" %>
-   <%= f.input :end_date, class: "form-control" %>
+    <%= f.input :start_date, as: :datetime, html5: true, class: "form-control" %>
+
+    <%= f.input :end_date, as: :datetime, html5: true, class: "form-control" %>
    <%= f.input :description, class: "form-control" %>
    <%= f.input :location, input_html: { class: 'location-autocomplete' } %>
    <%= f.input :price, class: "form-control" %>
@@ -16,3 +15,4 @@
    <%= f.submit button_text, class: "btn-primary btn-sm" %>
    <% end %>
  </div>
+
