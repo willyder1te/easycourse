@@ -1,6 +1,6 @@
-body {
-  min-height: calc(100vh - 70px - 64px);
-}
+// body {
+//   min-height: calc(100vh - 70px - 62px);
+// }
 
 .row {
   margin-bottom: 50px;
@@ -12,4 +12,11 @@ body {
 img {
   border-radius: 5px;
   opacity: 1 !important;
+}
+
+.app-container {
+  min-height: calc(100vh-70px);
+  // margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
